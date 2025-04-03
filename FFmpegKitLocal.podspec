@@ -9,31 +9,12 @@ Pod::Spec.new do |s|
   s.platform         = :ios, '12.0'
 
   # Explicitly list the frameworks
-  s.vendored_frameworks = [
-      'prebuilt/bundle-apple-framework-ios-lts/ffmpegkit.framework',
-      'prebuilt/bundle-apple-framework-ios-lts/libavcodec.framework',
-      'prebuilt/bundle-apple-framework-ios-lts/libavdevice.framework',
-      'prebuilt/bundle-apple-framework-ios-lts/libavfilter.framework',
-      'prebuilt/bundle-apple-framework-ios-lts/libavformat.framework',
-      'prebuilt/bundle-apple-framework-ios-lts/libavutil.framework',
-      'prebuilt/bundle-apple-framework-ios-lts/libswresample.framework',
-      'prebuilt/bundle-apple-framework-ios-lts/libswscale.framework'
-    ]
-  s.preserve_paths = [
-      'prebuilt/bundle-apple-framework-ios-lts/ffmpegkit.framework',
-      'prebuilt/bundle-apple-framework-ios-lts/libavcodec.framework',
-      'prebuilt/bundle-apple-framework-ios-lts/libavdevice.framework',
-      'prebuilt/bundle-apple-framework-ios-lts/libavfilter.framework',
-      'prebuilt/bundle-apple-framework-ios-lts/libavformat.framework',
-      'prebuilt/bundle-apple-framework-ios-lts/libavutil.framework',
-      'prebuilt/bundle-apple-framework-ios-lts/libswresample.framework',
-      'prebuilt/bundle-apple-framework-ios-lts/libswscale.framework'
-    ]
+  s.vendored_frameworks = 'prebuilt/bundle-apple-framework-ios-lts/*.framework'
 
 
   # Local source for development.
   # When publishing, change to a remote git repository and tag.
-  s.source = { :git => "file:///Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit", :branch => "main" }
+  s.source = { :git => "file:///Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit", :branch => "main"  , :tag => '1.0.0' }
 
   # Example if you had public header files.
   # s.public_header_files = 'Headers/*.h'

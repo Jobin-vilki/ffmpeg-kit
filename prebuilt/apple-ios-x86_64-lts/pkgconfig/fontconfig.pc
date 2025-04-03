@@ -1,0 +1,18 @@
+prefix=/Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit/prebuilt/apple-ios-x86_64-lts/fontconfig
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+sysconfdir=${prefix}/etc
+localstatedir=${prefix}/var
+PACKAGE=fontconfig
+confdir=${sysconfdir}/fonts
+cachedir=${localstatedir}/cache/${PACKAGE}
+
+Name: Fontconfig
+Description: Font configuration and customization library
+Version: 2.14.2
+Requires:  freetype2 >= 21.0.15, uuid, expat >= 2.2.0, libiconv
+Requires.private:
+Libs: -L${libdir} -lfontconfig
+Libs.private:
+Cflags: -I${includedir}

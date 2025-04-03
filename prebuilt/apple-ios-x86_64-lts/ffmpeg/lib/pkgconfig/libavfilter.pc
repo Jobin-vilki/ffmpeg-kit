@@ -1,0 +1,14 @@
+prefix=/Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit/prebuilt/apple-ios-x86_64-lts/ffmpeg
+exec_prefix=${prefix}
+libdir=/Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit/prebuilt/apple-ios-x86_64-lts/ffmpeg/lib
+includedir=/Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit/prebuilt/apple-ios-x86_64-lts/ffmpeg/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 9.3.100
+Requires: 
+Requires.private: libswscale >= 7.1.100, libavformat >= 60.3.100, libavcodec >= 60.3.100, libswresample >= 4.10.100, libavutil >= 58.2.100
+Conflicts:
+Libs: -L${libdir}  -lavfilter 
+Libs.private: -pthread -lm -L/Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit/prebuilt/apple-ios-x86_64-lts/fontconfig/lib -lfontconfig -L/Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit/prebuilt/apple-ios-x86_64-lts/freetype/lib -lfreetype -L/Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit/prebuilt/apple-ios-x86_64-lts/libpng/lib -lpng -L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.4.sdk/usr/lib -L/Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit/prebuilt/apple-ios-x86_64-lts/expat/lib -lexpat -liconv -L/Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit/prebuilt/apple-ios-x86_64-lts/freetype/lib -lfreetype -L/Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit/prebuilt/apple-ios-x86_64-lts/libpng/lib -lpng
+Cflags: -I${includedir}

@@ -1,0 +1,14 @@
+prefix=/Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit/prebuilt/apple-ios-arm64e-lts/ffmpeg
+exec_prefix=${prefix}
+libdir=/Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit/prebuilt/apple-ios-arm64e-lts/ffmpeg/lib
+includedir=/Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit/prebuilt/apple-ios-arm64e-lts/ffmpeg/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 58.2.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm -framework CoreFoundation -framework CoreVideo -framework CoreMedia
+Cflags: -I${includedir}
