@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.platform         = :ios, '12.1'
 
   # Use the local path as source so CocoaPods doesn’t try to fetch from remote
-  s.source = { :path => File.expand_path('.') }
+  s.source = { :git => "file:///Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit", :tag => "1.0.1" }
 
   # Vendored frameworks – adjust the path relative to the podspec file.
   s.vendored_frameworks = 'prebuilt/bundle-apple-framework-ios-lts/*.framework'
