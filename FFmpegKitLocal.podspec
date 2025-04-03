@@ -4,19 +4,19 @@ Pod::Spec.new do |s|
   s.summary          = 'Local FFmpegKit frameworks'
   s.description      = 'Local frameworks built from ffmpeg-kit for iOS.'
   s.homepage         = 'http://example.com'
-  s.license          = { :type => 'MIT' }
+  s.license          = 'MIT'
   s.author           = { 'You' => 'you@example.com' }
-  s.platform         = :ios, '12.0'
+  s.platform         = :ios, '12.1'
 
-  # Explicitly list the frameworks
+  # Use the local path as source so CocoaPods doesn’t try to fetch from remote
+  s.source = { :path => File.expand_path('.') }
+
+  # Vendored frameworks – adjust the path relative to the podspec file.
   s.vendored_frameworks = 'prebuilt/bundle-apple-framework-ios-lts/*.framework'
 
+  # Optionally, if you want to use your xcframework bundles instead:
+  # s.vendored_frameworks = 'prebuilt/bundle-apple-xcframework-ios-lts/*.xcframework'
 
-  # Local source for development.
-  # When publishing, change to a remote git repository and tag.
-  s.source = { :git => "file:///Users/ronythakkar/Desktop/ffmpeg/ffmpeg-kit", :branch => "main"  , :tag => '1.0.0' }
-
-  # Example if you had public header files.
-  # s.public_header_files = 'Headers/*.h'
-  # s.module_name = 'ffmpegkit'
+  # If needed, you can also add a preserve_paths attribute to make sure these files aren’t removed:
+  # s.preserve_paths = 'prebuilt/bundle-apple-framework-ios-lts/*.framework'
 end
