@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'FFmpegKitLocal'
+  s.name             = 'ffmpeg-kit'
   s.version          = '1.0.0'
   s.summary          = 'Local FFmpegKit XCFramework'
   s.description      = 'Local XCFramework built from FFmpegKit for iOS.'
